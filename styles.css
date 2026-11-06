@@ -1,0 +1,718 @@
+/* Variables de Identidad Visual Tecatex Aerospace */
+:root {
+    --negro-espacial: #0B0B0B;
+    --gris-cosmico: #2E2E2E;
+    --gris-medio: #1A1A1A;
+    --gris-borde: #383838;
+    --blanco-lunar: #FFFFFF;
+    --texto-secundario: #A0A0A0;
+    --font-heading: 'Exo 2', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--negro-espacial);
+    color: var(--blanco-lunar);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Typography & Titles */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 3px;
+    background: var(--blanco-lunar);
+    margin: 10px auto 0;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(11, 11, 11, 0.9);
+    border-bottom: 1px solid var(--gris-borde);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-emblem {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid var(--blanco-lunar);
+    background: radial-gradient(circle, #2e2e2e 0%, #0b0b0b 100%);
+    position: relative;
+}
+
+.logo-emblem::after {
+    content: '🚀';
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.brand-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: var(--texto-secundario);
+}
+
+.nav-links a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--blanco-lunar);
+}
+
+.status-badge {
+    background: var(--gris-cosmico);
+    border: 1px solid var(--gris-borde);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #00FF66;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00FF66;
+}
+
+/* Hero Section con Fondo de Espacio Animado */
+.hero {
+    position: relative;
+    padding: 160px 0 100px;
+    background: var(--negro-espacial);
+    border-bottom: 1px solid var(--gris-borde);
+    overflow: hidden;
+}
+
+#space-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 50%, rgba(46, 46, 46, 0.2) 0%, rgba(11, 11, 11, 0.85) 75%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-tag {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--texto-secundario);
+    font-weight: 700;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 15px 0 20px;
+    font-weight: 800;
+}
+
+.hero-text p {
+    color: var(--texto-secundario);
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--blanco-lunar);
+    color: var(--negro-espacial);
+}
+
+.btn-primary:hover {
+    background: #D9D9D9;
+}
+
+.btn-outline {
+    border: 1px solid var(--blanco-lunar);
+    color: var(--blanco-lunar);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Ilustración de la Luna y la Botella */
+.space-badge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.space-emblem-wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Luna Vectorial Monocromática */
+.lunar-sphere {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #FFFFFF 0%, #A0A0A0 50%, #2E2E2E 85%, #0B0B0B 100%);
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.25), inset -15px -15px 30px rgba(0,0,0,0.9);
+    animation: moonFloat 6s ease-in-out infinite alternate;
+}
+
+.crater {
+    position: absolute;
+    background: rgba(46, 46, 46, 0.6);
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.8), 1px 1px 2px rgba(255,255,255,0.3);
+}
+
+.crater-1 { width: 34px; height: 34px; top: 25%; left: 20%; }
+.crater-2 { width: 22px; height: 22px; top: 60%; left: 30%; }
+.crater-3 { width: 18px; height: 18px; top: 35%; left: 62%; }
+.crater-4 { width: 28px; height: 28px; top: 68%; left: 58%; }
+
+/* Botella Emblemática Tecatex */
+.bottle-emblem {
+    position: absolute;
+    z-index: 5;
+    width: 50px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.85));
+    animation: bottleFloat 5s ease-in-out infinite alternate;
+}
+
+.bottle-cap {
+    width: 16px;
+    height: 8px;
+    background: #FFFFFF;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 2px solid #2E2E2E;
+}
+
+.bottle-neck {
+    width: 18px;
+    height: 50px;
+    background: linear-gradient(90deg, #1A1A1A 0%, #FFFFFF 35%, #2E2E2E 70%, #0B0B0B 100%);
+    border-radius: 4px 4px 0 0;
+}
+
+.bottle-body {
+    width: 44px;
+    height: 110px;
+    background: linear-gradient(90deg, #1A1A1A 0%, #FFFFFF 30%, #2E2E2E 75%, #0B0B0B 100%);
+    border-radius: 12px 12px 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.bottle-label {
+    background: #0B0B0B;
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 0.55rem;
+    font-weight: 800;
+    padding: 3px 6px;
+    border: 1px solid #FFFFFF;
+    letter-spacing: 1px;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+}
+
+.star-sparkle {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    animation: sparklePulse 2s infinite alternate;
+}
+
+.sparkle-1 { top: 10px; right: 10px; animation-delay: 0s; }
+.sparkle-2 { bottom: 20px; left: 10px; animation-delay: 1s; }
+
+/* Animaciones flotantes */
+@keyframes moonFloat {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes bottleFloat {
+    0% { transform: translateY(0px) scale(1); }
+    100% { transform: translateY(-14px) scale(1.02); }
+}
+
+@keyframes sparklePulse {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Hero Telemetry Card */
+.hero-card {
+    background: rgba(26, 26, 26, 0.85);
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+    padding: 22px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--texto-secundario);
+    border-bottom: 1px solid var(--gris-borde);
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.badge-code {
+    background: var(--gris-cosmico);
+    padding: 2px 8px;
+    border-radius: 3px;
+    color: var(--blanco-lunar);
+}
+
+.countdown-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--texto-secundario);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: space-around;
+    background: var(--negro-espacial);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--gris-borde);
+    margin-bottom: 20px;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-box .number {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.time-box .unit {
+    font-size: 0.6rem;
+    color: var(--texto-secundario);
+    letter-spacing: 1px;
+}
+
+.card-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 4px;
+}
+
+.text-green {
+    color: #00FF66;
+    font-weight: 700;
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+}
+
+.dark-bg {
+    background: var(--negro-espacial);
+}
+
+.gray-bg {
+    background: var(--gris-cosmico);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.info-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
+}
+
+.spec-list {
+    list-style: none;
+}
+
+.spec-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--gris-borde);
+    font-size: 0.9rem;
+}
+
+/* Media Placeholders */
+.media-placeholder {
+    background: var(--gris-medio);
+    border: 2px dashed var(--gris-borde);
+    border-radius: 8px;
+    padding: 50px 20px;
+    text-align: center;
+    color: var(--texto-secundario);
+}
+
+.placeholder-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-placeholder {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Spec Cards */
+.card-spec {
+    background: var(--negro-espacial);
+    border: 1px solid var(--gris-borde);
+    padding: 25px 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.spec-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.card-spec h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.card-spec p {
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+}
+
+/* Timeline */
+.timeline {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    border-left: 2px solid var(--gris-borde);
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--blanco-lunar);
+    border-radius: 50%;
+    position: absolute;
+    left: -37px;
+    top: 5px;
+}
+
+.timeline-content {
+    background: var(--gris-medio);
+    border: 1px solid var(--gris-borde);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.time-stamp {
+    font-size: 0.75rem;
+    color: var(--texto-secundario);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.timeline-content h4 {
+    margin: 5px 0 8px;
+}
+
+.timeline-content p {
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+}
+
+/* Media Grid */
+.media-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.video-card .media-placeholder {
+    height: 100%;
+    min-height: 220px;
+}
+
+/* Crew / Badges */
+.crew-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.badge-card {
+    background: linear-gradient(145deg, #1f1f1f, #0b0b0b);
+    border: 1px solid var(--gris-borde);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.badge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gris-borde);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.badge-logo-mini {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--blanco-lunar);
+}
+
+.badge-tag {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.badge-body {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.badge-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--gris-cosmico);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border: 2px solid var(--gris-borde);
+}
+
+.badge-info h4 {
+    font-size: 1rem;
+}
+
+.badge-info .role {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--texto-secundario);
+}
+
+.badge-info .id-number {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.badge-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: var(--texto-secundario);
+    border-top: 1px solid var(--gris-borde);
+    padding-top: 10px;
+}
+
+.qr-placeholder {
+    width: 25px;
+    height: 25px;
+    background: var(--blanco-lunar);
+    border-radius: 2px;
+}
+
+/* Footer */
+.footer {
+    background: #050505;
+    border-top: 1px solid var(--gris-borde);
+    padding: 30px 0;
+    font-size: 0.8rem;
+    color: var(--texto-secundario);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-tag {
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content, .grid-2, .grid-4, .crew-grid, .media-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none;
+    }
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecatex Aerospace | Proyecto Final Rocketry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo-brand">
+                <div class="logo-emblem"></div>
+                <div class="brand-text">
+                    <span class="brand-title">TECATEX</span>
+                    <span class="brand-subtitle">AEROSPACE</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="#cohete">Cohete</a>
+                <a href="#especificaciones">Especificaciones</a>
+                <a href="#bitacora">Bitácora</a>
+                <a href="#galeria">Galería</a>
+                <a href="#tripulacion">Tripulación</a>
+            </nav>
+            <div class="status-badge">
+                <span class="status-dot"></span> MISIÓN ACTIVA
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section con Fondo de Espacio Animado, Luna y Botella Emblemática -->
+    <section class="hero">
+        <!-- Canvas para el fondo de estrellas en movimiento -->
+        <canvas id="space-canvas"></canvas>
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-tag">PROYECTO FINAL • SINALOA 2026</span>
+                <h1>DESPEGUE Y MISIONES DE ALTA ALTITUD</h1>
+                <p>Plataforma oficial del prototipo aeroespacial TECATEX-1. Documentación técnica, telemetría y registro audiovisual del lanzamiento orbital y suborbital.</p>
+                <div class="hero-actions">
+                    <a href="#galeria" class="btn btn-primary">Ver Lanzamiento</a>
+                    <a href="#especificaciones" class="btn btn-outline">Ficha Técnica</a>
+                </div>
+            </div>
+
+            <!-- Gráfico Emblemático Animado: Luna y Botella Tecatex -->
+            <div class="space-badge-container">
+                <div class="space-emblem-wrapper">
+                    <!-- Luna Vectorial Estilizada con Cráteres -->
+                    <div class="lunar-sphere">
+                        <div class="crater crater-1"></div>
+                        <div class="crater crater-2"></div>
+                        <div class="crater crater-3"></div>
+                        <div class="crater crater-4"></div>
+                    </div>
+
+                    <!-- Botella Vectorial Emblema (Estilizada en CSS/SVG) -->
+                    <div class="bottle-emblem">
+                        <div class="bottle-cap"></div>
+                        <div class="bottle-neck"></div>
+                        <div class="bottle-body">
+                            <div class="bottle-label">TECATEX</div>
+                        </div>
+                    </div>
+
+                    <!-- Destellos de estrellas SVG -->
+                    <div class="star-sparkle sparkle-1">✦</div>
+                    <div class="star-sparkle sparkle-2">✦</div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="card-header">
+                        <span>TELEMETRÍA DE MISIÓN</span>
+                        <span class="badge-code">TA-001</span>
+                    </div>
+                    <div class="countdown-container">
+                        <div class="countdown-label">TIEMPO PARA EL LANZAMIENTO</div>
+                        <div class="countdown-timer">
+                            <div class="time-box"><span class="number">00</span><span class="unit">DÍAS</span></div>
+                            <div class="time-box"><span class="number">00</span><span class="unit">HRS</span></div>
+                            <div class="time-box"><span class="number">00</span><span class="unit">MIN</span></div>
+                            <div class="time-box"><span class="number">00</span><span class="unit">SEG</span></div>
+                        </div>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-title">Estado del Cohete</span>
+                            <span class="stat-value text-green">LISTO EN RAMPA</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-title">Apogeo Objetivo</span>
+                            <span class="stat-value">3,000 M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información del Cohete -->
+    <section id="cohete" class="section dark-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>VISIÓN GENERAL DEL PROYECTO</h2>
+                <div class="line"></div>
+            </div>
+            <div class="grid-2">
+                <div class="info-box">
+                    <h3>El Prototipo TECATEX-1</h3>
+                    <p>Diseñado y ensamblado para validar la aerodinámica de la ojiva y el sistema de recuperación por paracaídas de dos etapas. Estructura optimizada de peso ligero para lograr la máxima eficiencia cinemática.</p>
+                    <ul class="spec-list">
+                        <li><strong>Longitud Total:</strong> 1.85 m</li>
+                        <li><strong>Diámetro de Cuerpo:</strong> 102 mm</li>
+                        <li><strong>Propulsión:</strong> Grano sólido de alta densidad</li>
+                    </ul>
+                </div>
+                <div class="media-placeholder hero-placeholder">
+                    <div class="placeholder-icon">🚀</div>
+                    <p>Espacio reservado para fotografía oficial del cohete en rampa de despegue</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especificaciones Técnicas -->
+    <section id="especificaciones" class="section gray-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>ESPECIFICACIONES TÉCNICAS</h2>
+                <div class="line"></div>
+            </div>
+            <div class="grid-4">
+                <div class="card-spec">
+                    <div class="spec-icon">⚡</div>
+                    <h4>Propulsión</h4>
+                    <p>Motor de combustible sólido con empuje promedio nominal de 450 N.</p>
+                </div>
+                <div class="card-spec">
+                    <div class="spec-icon">🛰️</div>
+                    <h4>Aviónica</h4>
+                    <p>Sensores barométricos, acelerómetro triaxial y telemetría por radioenlace.</p>
+                </div>
+                <div class="card-spec">
+                    <div class="spec-icon">🪂</div>
+                    <h4>Recuperación</h4>
+                    <p>Sistema dual de expulsión por carga pirotécnica y paracaídas drogue/principal.</p>
+                </div>
+                <div class="card-spec">
+                    <div class="spec-icon">📦</div>
+                    <h4>Carga Útil</h4>
+                    <p>Copia en miniatura del experimento "Cerveza Lunar" e instrumental térmico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bitácora de Despegue -->
+    <section id="bitacora" class="section dark-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>BITÁCORA Y FASES DE VUELO</h2>
+                <div class="line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="time-stamp">T-00:00:00</span>
+                        <h4>Ignición y Despegue</h4>
+                        <p>Activación del iniciador eléctrico y salida estable por el riel de lanzamiento.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="time-stamp">T+00:00:04</span>
+                        <h4>Burnout (Corte de Motor)</h4>
+                        <p>Alcanzada la máxima aceleración lineal y fase de ascenso inercial.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="time-stamp">T+00:00:18</span>
+                        <h4>Apogeo y Despliegue</h4>
+                        <p>Apertura del paracaídas principal en el punto máximo de altitud.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Medios -->
+    <section id="galeria" class="section gray-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>REGISTRO MULTIMEDIA</h2>
+                <div class="line"></div>
+            </div>
+            <div class="media-grid">
+                <div class="media-card video-card">
+                    <div class="media-placeholder">
+                        <div class="placeholder-icon">▶</div>
+                        <p>Video del Lanzamiento (Próximamente)</p>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-placeholder">
+                        <div class="placeholder-icon">📷</div>
+                        <p>Fotografía de Preparación en Taller</p>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-placeholder">
+                        <div class="placeholder-icon">📷</div>
+                        <p>Pruebas Estáticas de Estructura</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tripulación / Gafetes -->
+    <section id="tripulacion" class="section dark-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>EQUIPO DE DESARROLLO</h2>
+                <div class="line"></div>
+            </div>
+            <div class="crew-grid">
+                <!-- Gafete 1 -->
+                <div class="badge-card">
+                    <div class="badge-header">
+                        <div class="badge-logo-mini"></div>
+                        <span class="badge-tag">CREW MEMBER</span>
+                    </div>
+                    <div class="badge-body">
+                        <div class="badge-avatar">👤</div>
+                        <div class="badge-info">
+                            <h4>Dr. Amelia V. Ramirez</h4>
+                            <span class="role">Ingeniería de Propulsión</span>
+                            <span class="id-number">ID: TA-001</span>
+                        </div>
+                    </div>
+                    <div class="badge-footer">
+                        <span>ACCESO AUTORIZADO</span>
+                        <div class="qr-placeholder"></div>
+                    </div>
+                </div>
+
+                <!-- Gafete 2 -->
+                <div class="badge-card">
+                    <div class="badge-header">
+                        <div class="badge-logo-mini"></div>
+                        <span class="badge-tag">CREW MEMBER</span>
+                    </div>
+                    <div class="badge-body">
+                        <div class="badge-avatar">👤</div>
+                        <div class="badge-info">
+                            <h4>Miembro del Equipo</h4>
+                            <span class="role">Aviónica y Telemetría</span>
+                            <span class="id-number">ID: TA-002</span>
+                        </div>
+                    </div>
+                    <div class="badge-footer">
+                        <span>ACCESO AUTORIZADO</span>
+                        <div class="qr-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 TECATEX AEROSPACE. Todos los derechos reservados. Proyecto Final de Ingeniería.</p>
+            <span class="footer-tag">SINALOA, MÉXICO</span>
+        </div>
+    </footer>
+
+    <!-- Script para Fondo Espacial Animado -->
+    <script src="script.js"></script>
+</body>
+</html>
